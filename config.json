@@ -1,10 +1,10 @@
 {
-    "TOKEN": "OTYxNDQ3NjgwNzUwNTIyNDE5.Yk5H7Q.DEx_ZbEKmYdM27Aq2_xULXt8F30",
-    "guildID": "562060884055293982",
-    "trackGames": ["league of legends", "minecraft"],
+    "TOKEN": "",
+    "guildID": "",
+    "trackGames": ["league of legends", ""],
     "limitMinTicksToEnd": 30,
     "limitMinTicksToErased": 5,
     "tickerTick": 1,
-    "exceptRoles": ["898615642389897296", "562471032221335573"],
+    "exceptRoles": ["", ""],
     "whitelistMode": false
 }
