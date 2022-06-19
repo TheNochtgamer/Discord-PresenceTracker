@@ -14,7 +14,9 @@
 
 - token: El bot token
 - guildid: El id del servidor de discord
-- trackgames: Es para los juegos/aplicaciones que el bot seguira (nombres en minuscula)
+- trackgames: Un array de los juegos/aplicaciones que el bot seguira (nombres en minuscula)
 - limitmintickstoend: Es el limite en minutos que el usuario al pasarlo ejecute algo (modificable en el `playerClass.js`)
 - limitmintickstoerased: Es el tiempo en minutos que pasan cuando el usuario cierra la aplicacion y termine borrando el contador
 - tickertick: Son los segundos para que el bot actualice el contador
+- whitelistmode: Si deseas que los users con los roles que pusiste, se salteen al no tener ninguno `true` o se salteen al tener alguno de ellos `false`
+- exceptroles: Un array con los `ids` de los roles que quieras filtrar

@@ -15,8 +15,19 @@ const client = new Discord.Client({
 
 client.on('presenceUpdate', async (oldPress, newPress) => {
     if (newPress.guild.id !== config.guildID) return;
+    if (config.exceptRoles.length > 0) {
+        let tieneRoles = 0;
+        config.exceptRoles.forEach(exceptRol => {
+            tieneRoles += newPress.member.roles.cache.some(role => role.id === exceptRol) ? 1 : 0;
+        });
+        if (config.whitelistMode && tieneRoles == 0) {
+            return;
+        } else if (!config.whitelistMode && tieneRoles > 0) {
+            return;
+        }
+    }
 
-    let test = newPress?.activities?.find(nombre => config.trackGames.includes(nombre.name.toLowerCase()));
+    let test = newPress.activities?.find(nombre => config.trackGames.includes(nombre.name.toLowerCase()));
     let test2 = oldPress?.activities?.find(nombre => config.trackGames.includes(nombre.name.toLowerCase()));
 
     if (test && !test2) {
@@ -46,6 +57,7 @@ client.once('ready', async () => {
         console.log('Tracker activo en:', guild.name);
     } catch (error) {
         console.log(`Error, no se encontro el discord ${config.guildID}`);
+        process.exit(1);
     }
 })
 
