@@ -36,9 +36,9 @@ client.on('presenceUpdate', async (oldPres, newPres) => {
     // let hasAct1 = newPres.activities?.find(act => config.trackGames.includes(act.name.toLowerCase()));
     // let hasAct2 = oldPres?.activities?.find(act => config.trackGames.includes(act.name.toLowerCase()));
     let hasActNew = newPres.activities?.find(act => config.trackGames
-        .some(tg => intoRaw(act.name).includes(intoRaw(tg))));
+        .some(tg => tg && intoRaw(act.name).includes(intoRaw(tg))));
     let hasActOld = oldPres?.activities?.find(act => config.trackGames
-        .some(tg => intoRaw(act.name).includes(intoRaw(tg))));
+        .some(tg => tg && intoRaw(act.name).includes(intoRaw(tg))));
 
     let thisPlayer = trackedUsers.find(player => player
         .isMe({ id: newPres.userId, game: (hasActNew ? hasActNew.name : hasActOld?.name) }));
