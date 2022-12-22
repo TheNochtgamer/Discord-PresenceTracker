@@ -7,9 +7,9 @@
 1. Clona el repositorio
 2. Abre una ventana de **cmd** o **bash** dentro del directorio
 3. Instala los paquetes requeridos con `npm install`
-4. Reenombra el archivo *example.env* a *.env*
+4. Reenombra el archivo [*example.env*](https://github.com/TheNochtgamer/Discord-PresenceTracker/blob/main/example.env) a *.env*
 5. Añade el token del bot al archivo *.env*
-6. Añade el id del guild donde el bot funcionara al archivo *./src/config.json*
+6. Añade el id del guild donde el bot funcionara al archivo [*./src/config.json*](https://github.com/TheNochtgamer/Discord-PresenceTracker/blob/main/config.json)
 7. Listo!
 
 ## Configuracion
@@ -28,6 +28,6 @@
 
 ## RunMe
 
-> *./src/runMe.js*
+> [*./src/runMe.js*](https://github.com/TheNochtgamer/Discord-PresenceTracker/blob/main/src/runMe.js)
 
 ### Es el archivo de funcion que se ejecuta una vez el miembro haya superado el limite de tiempo (El unico parametro es el mismo objeto de Player)
