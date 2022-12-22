@@ -1,0 +1,12 @@
+{
+    "guildI2D": "123456789012345678",
+    "guildID": "562060884055293982",
+    "trackGames": ["league of legends", ""],
+    "limitMinTicksEnd": 4,
+    "limitMinTicksErase": 3,
+    "checkEverySeconds": 2,
+    "filteredRoles": [""],
+    "whiteListMode": false,
+    "limitPerUser": true,
+    "alertPercent": 15
+}
